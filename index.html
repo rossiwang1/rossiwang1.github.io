@@ -6,6 +6,108 @@
     <title>Sissy Guo - Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Noto+Serif:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .photo-wall {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 40px 20px;
+            position: relative;
+            min-height: 500px;
+        }
+        
+        .photo-wall img {
+            width: 160px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            position: relative;
+            transition: all 0.3s ease;
+            margin: -10px;
+        }
+
+        .photo-wall img:nth-child(1) { transform: rotate(-5deg); }
+        .photo-wall img:nth-child(2) { transform: rotate(3deg); }
+        .photo-wall img:nth-child(3) { transform: rotate(-3deg); }
+        .photo-wall img:nth-child(4) { transform: rotate(5deg); }
+        .photo-wall img:nth-child(5) { transform: rotate(-2deg); }
+        .photo-wall img:nth-child(6) { transform: rotate(4deg); }
+        .photo-wall img:nth-child(7) { transform: rotate(-4deg); }
+        .photo-wall img:nth-child(8) { transform: rotate(2deg); }
+        .photo-wall img:nth-child(9) { transform: rotate(-6deg); }
+        .photo-wall img:nth-child(10) { transform: rotate(6deg); }
+        .photo-wall img:nth-child(11) { transform: rotate(-3deg); }
+        
+        .photo-wall img:hover {
+            transform: scale(1.1) rotate(0deg) !important;
+            z-index: 10;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .photo-wall {
+                padding: 20px 10px;
+            }
+            .photo-wall img {
+                width: 140px;
+                height: 105px;
+            }
+        }
+        
+        .vision-item .cn {
+            font-size: 0.9em;
+        }
+        
+        .vision-item .plan-list-cn {
+            font-size: 0.9em;
+        }
+        
+        .vision-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .vision-item h4 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.3em;
+            color: #2c3e50;
+        }
+        
+        .vision-icon {
+            text-align: center;
+            font-size: 3em;
+            margin: 15px auto;
+            height: 80px;
+            line-height: 80px;
+        }
+        
+        .vision-icon span {
+            display: inline-block;
+            transform: scale(1.4);
+            filter: saturate(1.2) brightness(1.05);
+            transition: all 0.3s ease;
+        }
+        
+        .vision-icon span:hover {
+            transform: scale(1.5);
+            filter: saturate(1.3) brightness(1.1);
+        }
+        
+        .star-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -68,8 +170,8 @@
         <div class="achievements-grid">
             <div class="achievement-card">
                 <div class="image-pair">
-                    <img src="https://s3.bmp.ovh/imgs/2025/03/27/9be1fd059c39d180.png" alt="Asian Championship">
-                    <img src="https://s3.bmp.ovh/imgs/2025/03/27/086cc527af7234c6.png" alt="National Competition">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/f835b0bfa2ff1f0d.jpeg" alt="Achievement">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/27/158f3bdce4b277c1.png" alt="Achievement">
                 </div>
                 <div class="content">
                     <h3>National First-Class Athlete</h3>
@@ -79,8 +181,8 @@
             </div>
             <div class="achievement-card">
                 <div class="image-pair">
-                    <img src="https://s3.bmp.ovh/imgs/2025/03/27/c9c5fb7763c567cc.png" alt="National Competition">
-                    <img src="https://s3.bmp.ovh/imgs/2025/03/27/5f1c6ae6108fc55f.png" alt="Training">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/0dda82dcdba52cbd.png" alt="Research">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/5353551b31ec21c7.png" alt="Leadership">
                 </div>
                 <div class="content">
                     <h3>Research & Leadership</h3>
@@ -94,17 +196,32 @@
     <!-- Leadership Section -->
     <section id="leadership" class="leadership-section">
         <div class="section-header">
-            <h2>Leadership <span class="emoji">👥</span></h2>
+            <h2 style="color: #ffffff;">Leadership <span class="emoji">👥</span></h2>
         </div>
         <div class="leadership-content">
             <div class="leadership-text">
                 <h3>Community Builder & Youth Mentor</h3>
                 <p class="en">As a senior instructor in Kang Qiao School's Elite Instructor Volunteer Corps and a summer camp teacher, I've developed strong leadership skills while helping others grow. I also initiated the "One Painted Letter" project during the pandemic, connecting students across China and promoting cultural exchange.</p>
                 <p class="cn">作为康桥学校菁英教官志工团的资深教官和夏令营老师，我在帮助他人成长的过程中培养了强大的领导能力。我还在疫情期间发起了"一封画信"项目，连接全国各地的学生，促进文化交流。</p>
+                
+                <h3>Research Leadership</h3>
+                <p class="en">In 2023, I led a collaborative research project with the Department of Sports Rehabilitation at Soochow University, focusing on "The Impact of High-Intensity Interval Training on Cardiopulmonary Function and Mental Health in Adolescents." This research was integrated with our school's elite curriculum program, specifically during the island cycling training and implementation process.</p>
+                <p class="cn">2023年结合我校菁英课程--环岛骑行整体训练和执行过程与苏大体育学院运动康复系共同发起并参与，《高强度间歇运动对青少年心肺功能及心理健康的影响》课题研究。</p>
             </div>
             <div class="leadership-image">
-                <img src="https://s3.bmp.ovh/imgs/2025/03/27/25f6693e9be0d97f.jpg" alt="Teaching at Summer Camp">
-                <img src="https://s3.bmp.ovh/imgs/2025/03/27/75c81738fcbb137a.jpg" alt="International Friends">
+                <div class="photo-wall">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/f3534aa379745925.jpg" alt="Leadership Activity">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/1a5d42551c780749.jpg" alt="Team Building">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/8121d44b613daf18.jpg" alt="Research Project">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/329179a926036bb1.jpg" alt="Community Event">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/aff9ebe01f135201.jpg" alt="Training Session">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/1ee78d562742a23f.jpg" alt="Workshop">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/3fd42f64da8073bf.jpg" alt="Team Collaboration">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/ffbaf21c3908be45.jpg" alt="Leadership Moment">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/8121d44b613daf18.jpg" alt="Research Activities">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/d6c39a99cc4bcc1a.jpg" alt="Team Development">
+                    <img src="https://s3.bmp.ovh/imgs/2025/03/28/7896de384b3be6fe.jpg" alt="Leadership Training">
+                </div>
             </div>
         </div>
     </section>
@@ -136,8 +253,8 @@
                         <p class="en">Champion in Women's iBoat Junior Group at Jiangsu Provincial Games</p>
                         <p class="cn">江苏省省运会iboat女子乙组冠军</p>
                         <div class="image-pair">
-                            <img src="https://s3.bmp.ovh/imgs/2025/03/27/9877ba9e236bafce.png" alt="Provincial Games">
-                            <img src="https://s3.bmp.ovh/imgs/2025/03/27/adf42119aed190b3.png" alt="Victory Moment">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/65c87db4b67c1313.jpg" alt="Provincial Games">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/d1e4963dfb31804a.jpg" alt="Victory Moment">
                         </div>
                     </div>
                 </div>
@@ -148,6 +265,10 @@
                         <h3>National League Champion</h3>
                         <p class="en">Champion in Women's OP Junior Group at Meisha Education Cup National Sailing League (Shanghai)</p>
                         <p class="cn">梅沙教育杯全国帆船联赛上海站女子op女子乙组冠军</p>
+                        <div class="image-pair">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/6c1c20641418893e.jpg" alt="National League">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/5dcfaa73e5593f74.jpg" alt="Championship">
+                        </div>
                     </div>
                 </div>
 
@@ -159,7 +280,7 @@
                         <p class="cn">保利青谷杯中国深圳青少年帆船赛op女子U14亚军</p>
                         <div class="image-pair">
                             <img src="https://s3.bmp.ovh/imgs/2025/03/27/58918c49a0c5f752.png" alt="Competition">
-                            <img src="https://s3.bmp.ovh/imgs/2025/03/27/c9c5fb7763c567cc.png" alt="Award Ceremony">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/c497cd072941b635.jpg" alt="Award Ceremony">
                         </div>
                     </div>
                 </div>
@@ -183,6 +304,10 @@
                         <h3>Provincial Excellence</h3>
                         <p class="en">2nd Place in Women's ILCA4 at Jiangsu Provincial Championship</p>
                         <p class="cn">江苏省省锦标赛ILCA4女子亚军</p>
+                        <div class="image-pair">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/beebdfc99a25e78d.jpg" alt="Provincial Championship">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/c731fdbaa924e430.png" alt="Competition">
+                        </div>
                     </div>
                 </div>
 
@@ -193,8 +318,7 @@
                         <p class="en">Awarded National First-Class Athlete Certification in Sailing</p>
                         <p class="cn">获得国家一级运动员称号（帆船项目）</p>
                         <div class="image-pair">
-                            <img src="https://s3.bmp.ovh/imgs/2025/03/27/9be1fd059c39d180.png" alt="Award Ceremony">
-                            <img src="https://s3.bmp.ovh/imgs/2025/03/27/086cc527af7234c6.png" alt="Competition">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/3553bb1ef7f347d6.jpg" alt="Award Ceremony">
                         </div>
                     </div>
                 </div>
@@ -205,6 +329,9 @@
                         <h3>Provincial Team Champion</h3>
                         <p class="en">Champion in Women's ILCA6 Team Event at Jiangsu Provincial Championship</p>
                         <p class="cn">江苏省省冠军赛ILCA6女子团体冠军</p>
+                        <div class="image-pair">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/4249b22260009048.jpg" alt="Team Championship" style="height: 200px; object-fit: cover; object-position: 30% 20%;">
+                        </div>
                     </div>
                 </div>
 
@@ -214,6 +341,10 @@
                         <h3>Regional Excellence</h3>
                         <p class="en">4th Place in Women's ILCA at Yangtze River Delta Sailing Competition</p>
                         <p class="cn">长三角帆船赛ILCA女子第4名</p>
+                        <div class="image-pair">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/27/9be1fd059c39d180.png" alt="Regional Competition">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/53a92d3dfa3abd1f.jpg" alt="Competition">
+                        </div>
                     </div>
                 </div>
 
@@ -223,6 +354,10 @@
                         <h3>International Achievement</h3>
                         <p class="en">19th Place at Topper World Championships Topper 5.3</p>
                         <p class="cn">Topper World Championships Topper 5.3第19名</p>
+                        <div class="image-pair">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/7528244bbb82456e.jpg" alt="International Championship">
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/48f534995d107855.jpg" alt="World Championship">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,20 +371,48 @@
     <!-- Temple University Section -->
     <section id="temple" class="temple-section">
         <div class="section-header">
-            <h2>Why Temple University <span class="emoji">🎓</span></h2>
+            <h2>Setting Sail from Temple <span class="emoji">🎓</span></h2>
         </div>
         <div class="temple-content">
             <div class="temple-text">
                 <div class="vision">
-                    <h3>My Vision for Temple</h3>
+                    <h3>Where Perseverance Meets Purpose</h3>
                     <div class="vision-grid">
                         <div class="vision-item">
                             <div class="vision-icon">
-                                <svg class="sport-icon" viewBox="0 0 24 24">
-                                    <path d="M12 2L1 12h3v9h6v-6h4v6h6v-9h3L12 2z" />
+                                <svg viewBox="0 0 100 100" class="custom-icon">
+                                    <defs>
+                                        <linearGradient id="waterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4A90E2"/>
+                                            <stop offset="100%" style="stop-color:#357ABD"/>
+                                        </linearGradient>
+                                        <linearGradient id="sailGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#FFFFFF"/>
+                                            <stop offset="100%" style="stop-color:#E8E8E8"/>
+                                        </linearGradient>
+                                        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#87CEEB"/>
+                                            <stop offset="100%" style="stop-color:#4A90E2"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Background -->
+                                    <path d="M0 0 L100 0 L100 60 Q50 70, 0 60 Z" fill="url(#skyGradient)" opacity="0.3"/>
+                                    <!-- Waves -->
+                                    <path d="M0 65 Q25 55, 50 65 T100 65" stroke="url(#waterGradient)" stroke-width="2" fill="none" opacity="0.6"/>
+                                    <path d="M0 70 Q25 60, 50 70 T100 70" stroke="url(#waterGradient)" stroke-width="2" fill="none" opacity="0.8"/>
+                                    <path d="M0 75 Q25 65, 50 75 T100 75" stroke="url(#waterGradient)" stroke-width="2" fill="none"/>
+                                    <!-- Sailboat -->
+                                    <path d="M40 40 L40 70 Q55 65, 70 70 Z" fill="url(#sailGradient)" stroke="#4A90E2" stroke-width="1"/>
+                                    <path d="M42 70 L85 70 L63 45 Z" fill="url(#sailGradient)" stroke="#4A90E2" stroke-width="1"/>
+                                    <path d="M35 70 L90 70 L90 73 L35 73 Z" fill="#4A90E2"/>
+                                    <!-- Details -->
+                                    <circle cx="45" cy="45" r="1" fill="#4A90E2"/>
+                                    <circle cx="65" cy="50" r="1" fill="#4A90E2"/>
+                                    <path d="M38 35 Q40 33, 42 35" stroke="#4A90E2" stroke-width="1" fill="none"/>
                                 </svg>
                             </div>
-                            <h4>🏃‍♀️ Sports Community Builder</h4>
+                            <h4>Sports Community Builder</h4>
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/254b9afaa8794658.png" alt="Sports Community" class="vision-image">
                             <div class="vision-purpose">
                                 <h5>Purpose</h5>
                                 <p class="en">Democratize sailing education and make it accessible to inland communities</p>
@@ -273,12 +436,39 @@
                         </div>
                         <div class="vision-item">
                             <div class="vision-icon">
-                                <svg class="health-icon" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                                    <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                                <svg viewBox="0 0 100 100" class="custom-icon">
+                                    <defs>
+                                        <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4CAF50"/>
+                                            <stop offset="100%" style="stop-color:#388E3C"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Main Leaf -->
+                                    <path d="M50 10 
+                                             Q70 20, 80 40 
+                                             Q90 60, 80 80 
+                                             Q70 90, 50 90 
+                                             Q30 90, 20 80 
+                                             Q10 60, 20 40 
+                                             Q30 20, 50 10" 
+                                          fill="url(#leafGradient)"/>
+                                    <!-- Leaf Veins -->
+                                    <path d="M50 10 L50 90" 
+                                          stroke="white" stroke-width="2" 
+                                          opacity="0.3"/>
+                                    <path d="M30 30 Q50 40, 70 30" 
+                                          stroke="white" stroke-width="1.5" 
+                                          opacity="0.3"/>
+                                    <path d="M30 50 Q50 60, 70 50" 
+                                          stroke="white" stroke-width="1.5" 
+                                          opacity="0.3"/>
+                                    <path d="M30 70 Q50 80, 70 70" 
+                                          stroke="white" stroke-width="1.5" 
+                                          opacity="0.3"/>
                                 </svg>
                             </div>
-                            <h4>🔬 Sports Medicine Innovator</h4>
+                            <h4>Sports Medicine Innovator</h4>
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/c2d43d052cf3b2ad.png" alt="Sports Medicine" class="vision-image">
                             <div class="vision-purpose">
                                 <h5>Purpose</h5>
                                 <p class="en">Advance sports injury prevention and rehabilitation through interdisciplinary research</p>
@@ -302,12 +492,29 @@
                         </div>
                         <div class="vision-item">
                             <div class="vision-icon">
-                                <svg class="culture-icon" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                                    <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                                <svg viewBox="0 0 100 100" class="custom-icon">
+                                    <defs>
+                                        <linearGradient id="globeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#F39C12"/>
+                                            <stop offset="100%" style="stop-color:#E67E22"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Globe -->
+                                    <circle cx="50" cy="50" r="30" fill="url(#globeGradient)"/>
+                                    <!-- Meridians -->
+                                    <path d="M50 20 Q70 50, 50 80 Q30 50, 50 20" 
+                                          stroke="white" stroke-width="2" fill="none"/>
+                                    <path d="M20 50 Q50 40, 80 50 Q50 60, 20 50" 
+                                          stroke="white" stroke-width="2" fill="none"/>
+                                    <!-- Connecting Hands -->
+                                    <path d="M35 65 Q50 60, 65 65" 
+                                          stroke="white" stroke-width="3" fill="none"/>
+                                    <circle cx="35" cy="65" r="5" fill="white"/>
+                                    <circle cx="65" cy="65" r="5" fill="white"/>
                                 </svg>
                             </div>
-                            <h4>🌏 Cultural Bridge Builder</h4>
+                            <h4>Cultural Bridge Builder</h4>
+                            <img src="https://s3.bmp.ovh/imgs/2025/03/28/306a6e3123ca3689.png" alt="Cultural Exchange" class="vision-image">
                             <div class="vision-purpose">
                                 <h5>Purpose</h5>
                                 <p class="en">Foster international understanding through sports and cultural exchange</p>
